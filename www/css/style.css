@@ -1,0 +1,279 @@
+/* Styling for Home page*/
+.home-view {
+  width-height: 100%;
+  min-height: 100%;
+  background-color: #3b4b54;
+}
+
+.header {
+    margin: auto;
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+    color: blue;
+    border-radius: 5px;
+}
+
+.header h1 {
+  color: white;
+}
+
+.header-menu {
+	list-style-type: none;
+  margin: auto;
+  padding: 0;
+  color: white;
+}
+
+.header-item {
+	display: inline;
+	padding: 30px;
+	color: white;
+}
+
+.header-button {
+	text-decoration: none;
+  color: white;
+}
+
+#home-button {
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+}
+
+.nav-item {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  background-color: #669900;
+  color: white;
+  border-radius: 5px;
+  /*text-align: left;*/
+}
+
+.nav-item h3 {
+  color: white;
+  text-align: left;
+}
+
+.nav-item p {
+	text-align: right;
+}
+
+#orders {
+	background-color: #9ccca7;
+}
+
+#split {
+	background-color: #8bccb9;
+}
+
+#tips {
+	background-color: #a8dae0;
+}
+
+#total {
+	background-color: #83c6db;
+}
+
+#pay {
+	background-color: #3b4b54;
+	text-align: center;
+
+}
+
+#pay h3 {
+	color: white;
+	text-align: center;
+}
+
+/****************************** Styling for dashboard ****************************************/
+
+
+.dash-nav-item {
+  width: 100%;
+  height: 50px;
+  opacity: 10%;
+}
+
+.dash-nav-item h3 {
+  color: white;
+}
+
+#scan {
+  background-color: #9ccca7;
+  color: white;
+}
+
+#split {
+  background-color: #8bccb9;
+}
+
+#pay-settings {
+  background-color: #a8dae0;
+}
+
+#settings {
+  background-color: #83c6db;
+}
+
+
+
+
+/****************************** Styling for select restaurant page ****************************************/
+
+.restaurant-list-content {
+  
+}
+
+.restaurant {
+  /* possibly retrieve unique primary color and secondary color from each restaurant for color and background color */
+  background-color: blue;
+  color: white;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  margin: auto;
+  border: 5px solid white;
+
+}
+
+.restaurant h3 {
+  color: white;
+  text-decoration: none;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+}
+
+
+
+/****************************** Styling for register/login page ****************************************/
+/*
+.register-content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}*/
+.register-list {
+  margin: auto;
+  position: relative;
+  height: auto;
+}
+
+.register-list input {
+  color: white;
+  background-color: #3b4b54;
+  position: relative;
+}
+
+#submit-button {
+  position: relative;
+  margin-top: 20%;
+  color: white;
+  border: 1px solid white;
+  background-color: #3b4b54;
+}
+
+.credit-card-info {
+  position: relative;
+  /* margin-top: 5%; */
+  color: white;
+  background-color: #3b4b54;
+  
+}
+
+.credit-card-info p{
+  color: white;
+  background-color: #3b4b54;
+  position: relative;
+}
+
+#user-info {
+  color: white;
+  background-color: #3b4b54; 
+  position: relative;
+}
+
+.login-view {
+  background-color: #3b4b54;
+  width-height: 100%;
+  min-height: 100%;
+}
+
+
+#login-title h1 {
+  color: white;
+  position: relative;
+}
+
+
+.login-list input {
+  color: white;
+  background-color: #3b4b54;
+  position: relative;
+
+}
+
+#signup-button {
+  margin-top: 1px;
+  margin-right: 2px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+/**************************** Styling for Orders Page ***************************************************/
+
+.orders-view {
+  width-height: 100%;
+  min-height: 100%;
+  background-color: #9ccca7;
+}
+
+.orders-content h1 {
+  color: white;
+}
+
+/**************************** Styling for Tip Page ***************************************************/
+
+.tip-view {
+  width-height: 100%;
+  min-height: 100%;
+  background-color: #a8dae0;
+}
+
+.tip-view a {
+  text-decoration: none;
+}
+
+.tip-view h1 {
+  color: white;
+  text-align: center;
+}
+
+.tip-label {
+  background-color: #a8dae0;
+}
+
+/**************************** Styling for Profile Page ***************************************************/
+
+
+
+.profile-view {
+  width-height: 100%;
+  min-height: 100%;
+  background-color: #3b4b54;
+  color: white; 
+}
