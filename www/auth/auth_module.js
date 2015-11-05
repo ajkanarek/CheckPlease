@@ -2,6 +2,7 @@
 angular.module('auth', ['socket', 'auth.config'])
 .factory('auth', ['$rootScope', '$state', '$q', '$timeout', 'socket', 'auth_config', function($rootScope, $state, $q, $timeout, socket, auth_config) {
 
+	/* On connect see if we need to re-validate the user */
 	socket.on('connect', function() {
 		console.log('connected');
 		var token = "abc";
@@ -9,8 +10,8 @@ angular.module('auth', ['socket', 'auth.config'])
 			console.log(error);
 			console.log(data);
 		});
+	});
 
-	})
 	/* Saves a token to local storage */
 	function setToken(token) 
 	{
