@@ -8881,21 +8881,9 @@ a.button {
 /* Includes all the SCSS from the different views. 
  * Please keep in lexicographical order for tidyness reasons.
  */
-/* views/dashboard/dashboard.html */
-#dashboard .dash-nav-item {
-  width: 100%;
-  height: 50px;
-  opacity: 10%; }
-#dashboard .dash-nav-item h3 {
-  color: white; }
-#dashboard #scan {
-  background-color: #9ccca7;
-  color: white; }
-#dashboard #split {
-  background-color: #8bccb9; }
-#dashboard #pay-settings {
-  background-color: #a8dae0; }
-#dashboard #settings {
-  background-color: #83c6db; }
+/* views/scan/scan.html */
+#scan #scan_button {
+  position: absolute;
+  bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */

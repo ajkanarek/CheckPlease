@@ -4,7 +4,7 @@ angular.module('checkplease', ['ionic', 'ngCordova', 'auth', 'socket', 'views'])
         auth.validateToken().then(function() { /* Token is still valid */
             console.log('valid token');
             /* Go to dashboard, close splashscreen */
-            $state.go('dashboard');
+            $state.go('scan');
             $cordovaSplashscreen.hide();
         }, function() { /* Token is invalid */
             console.log('invalid token');

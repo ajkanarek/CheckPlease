@@ -34,10 +34,10 @@ angular.module('checkplease')
         controller: 'TipCtrl'
     });
 
-    $stateProvider.state('dashboard', {
-        url: '/dashboard',
-        templateUrl: 'views/dashboard/dashboard.html',
-        controller: 'dashCtrl'
+    $stateProvider.state('scan', {
+        url: '/scan',
+        templateUrl: 'views/scan/scan.html',
+        controller: 'scanCtrl'
     });
 
     $stateProvider.state('orders', {
