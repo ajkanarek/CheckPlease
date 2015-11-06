@@ -19,4 +19,4 @@ angular.module('checkplease', ['ionic', 'ngCordova', 'auth', 'socket', 'views'])
 })
 .controller('appCtrl', function () {
     /* Stubbed out. Don't put things here. */
-})
+});
