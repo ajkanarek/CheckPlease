@@ -8877,4 +8877,25 @@ a.button {
 .default-bg {
   background-color: #3b4B54; }
 
+/* Finally the views custom styling */
+/* Includes all the SCSS from the different views. 
+ * Please keep in lexicographical order for tidyness reasons.
+ */
+/* views/dashboard/dashboard.html */
+#dashboard .dash-nav-item {
+  width: 100%;
+  height: 50px;
+  opacity: 10%; }
+#dashboard .dash-nav-item h3 {
+  color: white; }
+#dashboard #scan {
+  background-color: #9ccca7;
+  color: white; }
+#dashboard #split {
+  background-color: #8bccb9; }
+#dashboard #pay-settings {
+  background-color: #a8dae0; }
+#dashboard #settings {
+  background-color: #83c6db; }
+
 /*# sourceMappingURL=style.css.map */

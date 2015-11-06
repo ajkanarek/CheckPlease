@@ -37,7 +37,7 @@ angular.module('checkplease')
     $stateProvider.state('dashboard', {
         url: '/dashboard',
         templateUrl: 'views/dashboard/dashboard.html',
-        controller: 'DashCtrl'
+        controller: 'dashCtrl'
     });
 
     $stateProvider.state('orders', {

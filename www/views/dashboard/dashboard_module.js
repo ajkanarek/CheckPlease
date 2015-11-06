@@ -1,6 +1,6 @@
 angular.module('views.dashboard', [])
 
-.controller('DashCtrl', ['$scope', '$cordovaBarcodeScanner', function($scope, $cordovaBarcodeScanner) {
+.controller('dashCtrl', ['$scope', '$cordovaBarcodeScanner', function($scope, $cordovaBarcodeScanner) {
 
   var restaurant = {
     id: '',

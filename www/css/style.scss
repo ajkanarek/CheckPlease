@@ -19,3 +19,6 @@ $light_black: #3b4B54;
 .default-bg {
     background-color: $light_black;
 }
+
+/* Finally the views custom styling */
+@import 'views/views';

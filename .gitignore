@@ -5,3 +5,4 @@ plugins/
 
 # We don't sync CSS files. CSS files are generated from SCSS
 *.css
+.sass-cache/
