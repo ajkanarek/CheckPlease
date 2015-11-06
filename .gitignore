@@ -1,6 +1,7 @@
-# Specifies intentionally untracked files to ignore when using Git
-# http://git-scm.com/docs/gitignore
-
+# These are managed dynamically by npm and ionic. Don't sync them.
 node_modules/
 platforms/
 plugins/
+
+# We don't sync CSS files. CSS files are generated from SCSS
+*.css

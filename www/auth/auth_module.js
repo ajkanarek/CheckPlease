@@ -4,8 +4,7 @@ angular.module('auth', ['socket', 'auth.config'])
 
 	/* On connect see if we need to re-validate the user */
 	socket.on('connect', function() {
-		console.log('connected');
-		var token = "abc";
+		var token = getToken();
 		socket.emit('validate_token', token, function(error, data) {
 			console.log(error);
 			console.log(data);
@@ -67,7 +66,7 @@ angular.module('auth', ['socket', 'auth.config'])
 		var deferred = $q.defer();
 
 		var token = getToken();
-		if(!token) { console.log('no token : auth'); deferred.reject(); return deferred.promise; }
+		if(!token) { deferred.reject(); return deferred.promise; }
 
 		socket.emit('validate_token', token, function(error, data) {
 			if(error)
