@@ -17,6 +17,10 @@ angular.module('checkplease', ['ionic', 'ngCordova', 'auth', 'socket', 'restaura
 .config(function() {
     /* Stubbed out for now */
 })
-.controller('appCtrl', function () {
+.controller('appCtrl', ['$scope', '$state', 'auth', function ($scope, $state, auth) {
+    /* Logs a user out and returns them to the login screen */
+    $scope.logout = function() {
+        auth.logout();
+    };
     /* Stubbed out. Don't put things here. */
-});
+}]);

@@ -1,1 +1,0 @@
-angular.module('views', ['views.login', 'views.register', 'views.scan', 'views.orders', 'views.profile']);

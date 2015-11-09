@@ -8875,12 +8875,39 @@ a.button {
 
 /* Next come global styles so they can be overwritten */
 .default-bg {
-  background-color: #3b4B54; }
+  background-color: #3B4B54; }
 
 /* Finally the views custom styling */
 /* Includes all the SCSS from the different views. 
  * Please keep in lexicographical order for tidyness reasons.
  */
+/* views/login/login.html */
+#login {
+  background-image: url("../views/login/img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #login #title {
+    color: #DDD;
+    text-shadow: 0px 0px 5px #333;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0px; }
+  #login #error {
+    text-align: center;
+    color: #B83F3F;
+    background-color: rgba(100, 100, 100, 0.25);
+    padding: 5px;
+    box-shadow: 0px 0px 5px #333;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  #login #login_button {
+    position: absolute;
+    bottom: 0; }
+  #login input {
+    color: #FFF; }
+  #login .item-floating-label .input-label.has-input {
+    color: #FFF; }
+
 /* views/scan/scan.html */
 #scan #restaurant_name {
   text-align: center;

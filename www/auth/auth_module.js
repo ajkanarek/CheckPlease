@@ -83,7 +83,7 @@ angular.module('auth', ['socket', 'auth.config'])
 	function logUserOut()
 	{
 		setToken(null);
-		$state.go('user_login');
+		$state.go('login');
 	}
 
     return {
