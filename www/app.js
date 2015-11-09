@@ -1,4 +1,4 @@
-angular.module('checkplease', ['ionic', 'ngCordova', 'auth', 'socket', 'views'])
+angular.module('checkplease', ['ionic', 'ngCordova', 'auth', 'socket', 'restaurants', 'views'])
 .run(['$ionicPlatform', '$cordovaSplashscreen', '$state', 'auth', function($ionicPlatform, $cordovaSplashscreen, $state, auth) {
     $ionicPlatform.ready(function() {
         auth.validateToken().then(function() { /* Token is still valid */

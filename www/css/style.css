@@ -8882,8 +8882,29 @@ a.button {
  * Please keep in lexicographical order for tidyness reasons.
  */
 /* views/scan/scan.html */
-#scan #scan_button {
+#scan #restaurant_name {
+  text-align: center;
+  color: #FFF;
+  text-shadow: 0px 0px 5px #222;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+#scan #restaurant_description {
+  padding: 5px 10px;
+  color: #CCC; }
+#scan img {
+  display: block;
+  margin: 20px auto;
+  border: 3px #FFF solid;
+  box-shadow: 0px 0px 15px 5px #000;
+  width: 90%;
+  height: auto; }
+#scan #button_row {
   position: absolute;
   bottom: 0; }
+#scan #scan_button {
+  width: 100%; }
+#scan #go_button {
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

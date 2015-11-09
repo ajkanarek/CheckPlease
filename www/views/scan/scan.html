@@ -6,7 +6,20 @@
 
 		<ion-side-menu-content>
 		  	<ion-content id="scan" scroll="false" class="default-bg">
-				<button id="scan_button" ng-click="scan()" class="button button-full button-royal">Scan QR Code</button>			
+		  		<img ng-src="{{ restaurant.img }}" />
+		  		<h1 id="restaurant_name">{{ restaurant.name }}</h1>
+		  		<p id="restaurant_description">{{ restaurant.description }}</p>
+		  		<div id="button_row" class="row">
+		  			<div ng-if="!restaurant.id" class="col">
+						<button id="scan_button" ng-click="scan()" class="button button-full button-royal">Scan QR Code</button>
+					</div>
+		  			<div ng-if="restaurant.id" class="col">
+						<button id="scan_button" ng-click="scan()" class="button button-royal left">Scan</button>
+					</div>
+		  			<div ng-if="restaurant.id" class="col">
+						<button id="go_button" ng-click="goToTab()" class="button button-balanced right">Go</button>
+					</div>
+				</div>
 			</ion-content>
 		</ion-side-menu-content>
 

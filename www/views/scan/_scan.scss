@@ -1,8 +1,40 @@
 /* views/scan/scan.html */
 
 #scan {
-	#scan_button {
+
+	#restaurant_name {
+		text-align: center;
+	    color: #FFF;
+	    text-shadow: 0px 0px 5px #222;
+	    width: 100%;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+
+	#restaurant_description {
+		padding: 5px 10px;
+    	color: #CCC;
+	}
+
+	img {
+		display: block;
+	    margin: 20px auto;
+	    border: 3px #FFF solid;
+	    box-shadow: 0px 0px 15px 5px #000;
+	    width: 90%;
+	    height: auto;
+	}
+
+	#button_row {
 		position: absolute;
 		bottom: 0;
+	}
+
+	#scan_button {
+		width: 100%;
+	}
+
+	#go_button {
+		width: 100%;
 	}
 }
