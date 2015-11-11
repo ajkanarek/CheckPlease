@@ -1,6 +1,6 @@
-<ion-view view-title="login-view" class="login-view">
+<ion-view>
   <ion-content id="login" scroll="false">
-  	<div class="login-content" ng-controller="LoginCtrl">
+  	<div>
   		<div class="row">
   			<div class="col">
 	  			<h1 id="title">CheckPlease</h1>
@@ -27,10 +27,14 @@
 		</div>
 		<div class="row">
 			<div class="col">
+			  	<button id="signup_button" class="button button-clear" ui-sref="register">New? Sign Up Instead</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
 				<button id="login_button" class="button button-full button-royal" ng-click="validate()">Log In</button>
 			</div>
 		</div>
-	  	<!-- <button id="signup-button" class="icon-left" ui-sref="register">Sign Up</button> -->
 	</div>
   </ion-content>
 </ion-view>

@@ -1,7 +1,7 @@
-/* views/login/login.html */
+/* views/register/register.html */
 
-#login {
-	background-image: url('../views/login/img/background.jpg');
+#register {
+	background-image: url('../views/register/img/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -23,16 +23,11 @@
 	    overflow: hidden;
     }
 
-    #login_button {
+    #register_button {
     	position: absolute;
     	bottom: 0;
         left: 0;
         right: 0;
-    }
-
-    #signup_button {
-        color: #FFF;
-        width: 100%;
     }
 
     input {

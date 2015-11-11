@@ -1,90 +1,31 @@
-<ion-view view-title="register-view" class="login-view">
-  	<ion-content class="padding" id="login-page">
-	  	<div class="login-content" ng-controller="RegisterCtrl">
-		  	<div id="login-title">
-		  		<center><h1 class="login-title">CheckPlease</h1></center>
-		  		<button class="icon-left" id="signup-button" ui-sref="login">Log In</button>
-			</div>
-
-			<div class="register-list has-header">
-				<div class="item item-divider" id="user-info">
-					User Info
-				</div>
-				<label class="item item-input item-floating-label">
-					<span class="input-label">Email</span>
-					<input type="text" placeholder="Email" ng-model="user.email">
-				</label>
-				<label class="item item-input item-floating-label">
-					<span class="input-label">Username</span>
-					<input type="text" placeholder="Username" ng-model="user.username">
-				</label>
-				<label class="item item-input item-floating-label">
-					<span class="input-label">Password</span>
-					<input type="password" placeholder="Password" ng-model="user.password">
-				</label>
-
-				<div class="item item-divider padding credit-card-info">
-						Credit Card Info
-					
-					<p>
-						Card Company:
-						<select name="card-type" id="card-type" onchange"" size="1" ng-model="user.card.company">
-							<option value="" selected disabled>Company</option>
-							<option value="Visa">Visa</option>
-							<option value="Mastercard">Mastercard</option>
-							<option value="AmericanExpress">American Express</option>
-						</slect>
-					</p>
-
-					<label class="item item-input item-floating-label">
-						<span class="input-label">Credit Card Number</span>
-						<input type="text" placeholder="Card Number" ng-model="user.card.number">
-					</label>
-					<label class="item item-input item-floating-label">
-						<span class="input-label">Name on Card</span>
-						<input type="text" placeholder="Name on Card" ng-model="user.card.name">
-					</label>
-					<label class="item item-input item-floating-label">
-						<span class="input-label">VCV Number</span>
-						<input type="text" placeholder="Card Security Code (CVC)" ng-model="user.card.cvc">
-					</label>
-
-				  	<p>
-				  		Expiration Date:
-				  		<!-- Month dropdown -->
-						<select name="month" id="month" onchange="" size="1" placeholder="month" ng-model="user.card.month_exp">
-							<option value="" selected disabled>Month</option>
-						    <option value="01">January</option>
-						    <option value="02">February</option>
-						    <option value="03">March</option>
-						    <option value="04">April</option>
-						    <option value="05">May</option>
-						    <option value="06">June</option>
-						    <option value="07">July</option>
-						    <option value="08">August</option>
-						    <option value="09">September</option>
-						    <option value="10">October</option>
-						    <option value="11">November</option>
-						    <option value="12">December</option>
-						</select>
-
-						<!-- Year dropdown -->
-						<select name="year" id="year" onchange="" size="1" ng-model="user.card.year_exp">
-							<option value="" selected disabled>Year</option>
-						    <option value="2015">2015</option>
-						    <option value="2016">2016</option>
-						    <option value="2017">2017</option>
-						    <option value="2018">2018</option>
-						    <option value="2019">2019</option>
-						    <option value="2020">2020</option>
-						</select>
-					</p>
-				</div>
-			</div>
-			<button class="button button-full" id="submit-button" ng-click="register()">
-				Register
-			</button>
+<ion-view>
+  <ion-content id="register" scroll="false">
+		<div class="row">
+			<div class="col">
+  			<h1 id="title">Register</h1>
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="col">
+			<label class="item item-input item-floating-label">
+				<span class="input-label">Email</span>
+				<input type="text" placeholder="Email" ng-model="user.email">
+			</label>
+		    <label class="item item-input item-floating-label">
+		        <span class="input-label">Password</span>
+		        <input type="password" placeholder="Password" ng-model="user.password">
+		  	</label>
 		</div>
-		
-	</ion-content>
+	</div>
+	<div ng-if="error.length" class="row">
+		<div class="col">
+			<div id="error">{{ error }}</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<button id="register_button" class="button button-full button-royal" ng-click="register()">Register</button>
+		</div>
+	</div>
+  </ion-content>
 </ion-view>

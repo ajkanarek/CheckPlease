@@ -43,7 +43,6 @@ angular.module('auth', ['socket', 'auth.config'])
 	function registerUser(user)
 	{
 		var deferred = $q.defer();
-		//$timeout(function() { console.log('rejected'); deferred.reject(); }, 5000);
 
 		socket.emit('register', user, function(error, token) {
 			if(error)
