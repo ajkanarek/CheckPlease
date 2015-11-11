@@ -40,6 +40,30 @@ angular.module('views.bill', ['ngCordova', 'restaurants'])
         console.log($scope.restaurant);
     });
 
+    /* Creates a Stripe Token for the user */
+    /* Make this into a direcitve/reusable thing */
+    $scope.pay = function() {
+        var handler = StripeCheckout.configure({
+            key: 'pk_test_rWwRxSPszJRNxUv0nYL1QWUR',
+            image: 'views/bill/imgs/default_user.png',
+            locale: 'auto',
+            token: function(token) {
+                console.log('token');
+                console.log(token);
+            }
+        });
+
+        handler.open({
+            name: 'Tab',
+            description: 'A Delicious Meal',
+            amount: $scope.getTotal() * 100
+        });
+
+        $(window).on('popstate', function() {
+            handler.close();
+        });
+    };
+
 }])
 /* Sets the background of the header to a blurred version of the restaurants 
  * image. Triky because it needs to add a new style that overwrites the :before

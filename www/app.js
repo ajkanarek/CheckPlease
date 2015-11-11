@@ -15,7 +15,7 @@ angular.module('checkplease', ['ionic', 'ngCordova', 'auth', 'socket', 'restaura
     });
 }])
 .config(function() {
-    /* Stubbed out for now */
+    // Stripe.setPublishableKey('pk_test_rWwRxSPszJRNxUv0nYL1QWUR');
 })
 .controller('appCtrl', ['$scope', '$state', 'auth', function ($scope, $state, auth) {
     /* Logs a user out and returns them to the login screen */
