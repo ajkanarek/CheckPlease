@@ -41,11 +41,7 @@ angular.module('restaurants', ['socket', 'restaurants.config'])
 		}
 		else /* Not in cache, ask the server */
 		{
-			console.log('looking up restaurant');
 			socket.emit('lookup_restuarant', restaurant_id, function(error, data) {
-				console.log('done looking up restaurant');
-				console.log(error);
-				console.log(data);
 				if(error) { console.log(error); deferred.reject(null); }
 				else /* Restaurant found */
 				{

@@ -32,8 +32,8 @@ angular.module('views.scan', ['ngCordova', 'restaurants'])
 
     /* Goes to the main tab page */
     $scope.goToTab = function() {
+        $state.go('bill', {restaurant_id: $scope.restaurant.id});
         console.log('clicked go button');
-        $state.go('');
     };
 
     /* Start on the scan view */

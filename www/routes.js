@@ -13,13 +13,13 @@ angular.module('checkplease')
     $stateProvider.state('login', {
         url: '/login',
         templateUrl: 'views/login/login.html',
-        controller: 'LoginCtrl'
+        controller: 'loginCtrl'
     });
 
     $stateProvider.state('register', {
         url: '/register',
         templateUrl: 'views/register/register.html',
-        controller: 'RegisterCtrl'
+        controller: 'registerCtrl'
     });
 
     $stateProvider.state('restaurants', {
@@ -38,6 +38,12 @@ angular.module('checkplease')
         url: '/scan',
         templateUrl: 'views/scan/scan.html',
         controller: 'scanCtrl'
+    });
+
+    $stateProvider.state('bill', {
+        url: '/bill/:restaurant_id',
+        templateUrl: 'views/bill/bill.html',
+        controller: 'billCtrl'
     });
 
     $stateProvider.state('orders', {

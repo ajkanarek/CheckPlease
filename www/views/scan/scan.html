@@ -1,4 +1,4 @@
-<ion-view id="side_menu">
+<ion-view cache-view="false" id="side_menu">
 	<ion-side-menus>
 
 		<ion-side-menu side="left">
@@ -18,6 +18,7 @@
 		  		</div>
 		  		<h1 id="restaurant_name" ng-if="restaurant.name">{{ restaurant.name }}</h1>
 		  		<p id="restaurant_description" ng-if="restaurant.description">{{ restaurant.description }}</p>
+		  		<h4 id="table_number" ng-if="restaurant.table_id">Table Number: {{ restaurant.table_id }}</h4>
 		  		<div id="button_row" class="row">
 		  			<div ng-if="!restaurant.id" class="col">
 				  		<img id="down_arrow" src="views/scan/imgs/down_arrow.png" />

@@ -1,7 +1,7 @@
 angular.module('views.login', ['auth'])
 
 // Login Controller
-.controller('LoginCtrl', ['$scope', '$state', 'auth', function($scope, $state, auth) {
+.controller('loginCtrl', ['$scope', '$state', 'auth', function($scope, $state, auth) {
 	/* User login credentials */
 	$scope.user = {
 		email: "",

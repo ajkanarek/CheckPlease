@@ -1,5 +1,5 @@
 angular.module('views.register', ['auth'])
-.controller('RegisterCtrl', ['$scope', '$state', '$timeout', '$location', 'auth', function($scope, $state, $timeout, $location, auth) {
+.controller('registerCtrl', ['$scope', '$state', '$timeout', '$location', 'auth', function($scope, $state, $timeout, $location, auth) {
 	/* User register credentials */
 	$scope.user = {
 		email: "",

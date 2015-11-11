@@ -8895,6 +8895,31 @@ a.button {
       color: #FFF; }
 
 /* Individual Views */
+/* views/bill/bill.html */
+#bill #header:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url("");
+  width: 100%;
+  height: 80px;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); }
+#bill #header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0; }
+#bill img.blur {
+  -webkit-filter: blur(3px);
+  filter: blur(3px); }
+
 /* views/login/login.html */
 #login {
   background-image: url("../views/login/img/background.jpg");
@@ -8973,6 +8998,14 @@ a.button {
   color: #FFF; }
   #scan #explanation img {
     width: 100%; }
+#scan #table_number {
+  color: #DDD;
+  text-align: center;
+  font-size: 1.5em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 55px; }
 #scan #down_arrow {
   position: relative;
   top: 0;
