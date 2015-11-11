@@ -1,4 +1,4 @@
-<ion-view>
+<ion-view id="side_menu">
 	<ion-side-menus>
 
 		<ion-side-menu side="left">
@@ -7,9 +7,9 @@
 
 		<ion-side-menu-content>
 		  	<ion-content id="scan" scroll="false" class="default-bg">
-		  		<img ng-src="{{ restaurant.img }}" />
-		  		<h1 id="restaurant_name">{{ restaurant.name }}</h1>
-		  		<p id="restaurant_description">{{ restaurant.description }}</p>
+		  		<img ng-if="restaurant.img" ng-src="{{ restaurant.img }}" />
+		  		<h1 id="restaurant_name" ng-if="restaurant.name">{{ restaurant.name }}</h1>
+		  		<p id="restaurant_description" ng-if="restaurant.description">{{ restaurant.description }}</p>
 		  		<div id="button_row" class="row">
 		  			<div ng-if="!restaurant.id" class="col">
 						<button id="scan_button" ng-click="scan()" class="button button-full button-royal">Scan QR Code</button>

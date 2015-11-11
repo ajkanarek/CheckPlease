@@ -8882,6 +8882,18 @@ a.button {
  * Please keep in lexicographical order for tidyness reasons.
  */
 /* Directives */
+#side_menu {
+  /* Containing div */ }
+  #side_menu ion-side-menu.menu.menu-left {
+    background-color: #2B3B44;
+    /* Slightly darker than $light_grey */ }
+  #side_menu ion-item {
+    background-color: #222; }
+    #side_menu ion-item p {
+      color: #FFF; }
+    #side_menu ion-item i {
+      color: #FFF; }
+
 /* Individual Views */
 /* views/login/login.html */
 #login {
