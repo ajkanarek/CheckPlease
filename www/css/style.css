@@ -8881,6 +8881,8 @@ a.button {
 /* Includes all the SCSS from the different views. 
  * Please keep in lexicographical order for tidyness reasons.
  */
+/* Directives */
+/* Individual Views */
 /* views/login/login.html */
 #login {
   background-image: url("../views/login/img/background.jpg");
@@ -8902,7 +8904,9 @@ a.button {
     overflow: hidden; }
   #login #login_button {
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    left: 0;
+    right: 0; }
   #login input {
     color: #FFF; }
   #login .item-floating-label .input-label.has-input {
