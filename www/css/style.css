@@ -8967,7 +8967,21 @@ a.button {
 #scan #restaurant_description {
   padding: 5px 10px;
   color: #CCC; }
-#scan img {
+#scan #explanation {
+  text-align: center;
+  padding: 10px;
+  color: #FFF; }
+  #scan #explanation img {
+    width: 100%; }
+#scan #down_arrow {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: block;
+  margin: 0px auto; }
+#scan img.restaurant {
   display: block;
   margin: 20px auto;
   border: 3px #FFF solid;

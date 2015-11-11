@@ -16,7 +16,27 @@
     	color: #CCC;
 	}
 
-	img {
+	#explanation {
+		img {
+			width: 100%;
+		}
+
+		text-align: center;
+   		padding: 10px;
+		color: #FFF;
+	}
+
+	#down_arrow {
+		position: relative;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    text-align: center;
+	    display: block;
+	    margin: 0px auto;
+	}
+
+	img.restaurant {
 		display: block;
 	    margin: 20px auto;
 	    border: 3px #FFF solid;
