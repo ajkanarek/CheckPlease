@@ -9,6 +9,27 @@ angular.module('views.bill', ['ngCordova', 'restaurants'])
         img: ""
     };
 
+    /* List of items on the bill, mocked for now */
+    $scope.items = [
+        {name: "Bacon Burger", price: 6.89},
+        {name: "Sweet Potato Fries", price: 3.99},
+        {name: "Coke 20oz", price: 1.79},
+        {name: "Loaded Potato Wedges", price: 4.99},
+        {name: "Caesar Salad", price: 3.99},
+        {name: "Chocolate Milkshake", price: 2.99},
+        {name: "Sweet release of death", price: 0},
+    ];
+
+    /* Calculates the total cost of all items */
+    $scope.getTotal = function() {
+        var total = 0;
+        for(var i = 0; i < $scope.items.length; i++)
+        {
+            var item = $scope.items[i];
+            total += item.price;
+        }
+        return total;
+    };  
 
     var restaurant_id = $stateParams.restaurant_id;
     console.log(restaurant_id);
@@ -20,7 +41,10 @@ angular.module('views.bill', ['ngCordova', 'restaurants'])
     });
 
 }])
-/* Sets the background of the header to a blurred version of the restaurants image */
+/* Sets the background of the header to a blurred version of the restaurants 
+ * image. Triky because it needs to add a new style that overwrites the :before
+ * pseudo element styling for best effect.
+ */
 .directive('billBackgroundImg', function($timeout) {
     return {
         restrict: 'A',
@@ -43,4 +67,26 @@ angular.module('views.bill', ['ngCordova', 'restaurants'])
             scope.$watch(function() { return scope.img_url(); }, setImage);
         }
     }
+})
+/* This should be made global eventually */
+.filter( 'dollar', function() {
+    return function(input) {
+        input = Number(input);
+        if(input === 0) { return "FREE"; }
+
+        input = input.toFixed(2);
+        input = "$" + input;
+        return input;
+    }
 });
+
+
+
+
+
+
+
+
+
+
+
