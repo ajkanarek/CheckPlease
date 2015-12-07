@@ -1,5 +1,6 @@
 angular.module('restaurants.config', [])
 .constant('restaurants_config', {
+	static_img_path: "http://162.243.48.9:1337/static/img/restaurants/",
 	dummy_restaurant: {
 			id: 0,
 			name: "Restaurant",

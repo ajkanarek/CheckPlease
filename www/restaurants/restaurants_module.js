@@ -11,8 +11,7 @@ angular.module('restaurants', ['socket', 'restaurants.config'])
 	{
 		var deferred = $q.defer();
 
-		/* The URL should be specified in a config file */
-		var url = "http://45.55.196.97:1337/static/img/restaurants/" + img_name;
+		var url = restaurants_config.static_img_path + img_name;
 		var destination_path = cordova.file.dataDirectory + img_name;
 		var trust_hosts = true;
 		var options = {};
