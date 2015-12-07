@@ -4,7 +4,7 @@ angular.module('socket', ['socket.config'])
      * application is independent from the web socket implementation if it 
      * ever changes.
      */
-    var socket = io.connect(socket_config.web_socket_url);
+    var socket = io.connect("http://162.243.48.9:1337/");
 
     return {
         on: function (eventName, callback) {

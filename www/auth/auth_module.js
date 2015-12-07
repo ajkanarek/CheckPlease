@@ -4,10 +4,15 @@ angular.module('auth', ['socket', 'auth.config'])
 
 	/* On connect see if we need to re-validate the user */
 	socket.on('connect', function() {
+		console.log('Connected!');
 		var token = getToken();
 		socket.emit('validate_token', token, function(error, data) {
-			console.log(error);
-			console.log(data);
+			if(error) { console.log(error); }
+			else
+			{
+				console.log("Token");
+				setToken(data);
+			}
 		});
 	});
 
@@ -28,6 +33,10 @@ angular.module('auth', ['socket', 'auth.config'])
 	{
 		var deferred = $q.defer();
 
+		$timeout(function() {
+			deferred.reject({code: 2, mssg: "Connection timed out."});
+		}, auth_config.timeout);
+
 		socket.emit('login', user, function(error, token) {
 			if(error)
 			{
@@ -42,7 +51,14 @@ angular.module('auth', ['socket', 'auth.config'])
 
 	function registerUser(user)
 	{
+		console.log("REGISTERING");
+		console.log(user);
+
 		var deferred = $q.defer();
+
+		$timeout(function() {
+			deferred.reject({code: 2, mssg: "Connection timed out."});
+		}, auth_config.timeout);
 
 		socket.emit('register', user, function(error, token) {
 			if(error)
@@ -51,10 +67,9 @@ angular.module('auth', ['socket', 'auth.config'])
 				deferred.reject(error);
 			}
 			else { console.log("token"); setToken(token); deferred.resolve(); }
-		})
+		});
 
 		return deferred.promise;
-		
 	}
 
 	/* Checks that the local token is still valid. Sends the user to the
@@ -66,6 +81,10 @@ angular.module('auth', ['socket', 'auth.config'])
 
 		var token = getToken();
 		if(!token) { deferred.reject(); return deferred.promise; }
+
+		$timeout(function() {
+			deferred.reject({code: 2, mssg: "Connection timed out."});
+		}, auth_config.timeout);
 
 		socket.emit('validate_token', token, function(error, data) {
 			if(error)
